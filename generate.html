@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI生成</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+<div class="header">
+<a href="index.html">← 返回</a>
+<h2>AI 生成</h2>
+</div>
+<div class="card">
+<h3>选择风格（合规可商用）</h3>
+<div class="styles">
+<div class="style active">情绪电影风</div>
+<div class="style">硬核时空风</div>
+<div class="style">东方仪式风</div>
+<div class="style">现实寓言风</div>
+<div class="style">复古爽片风</div>
+<div class="style">治愈生活风</div>
+<div class="style">对称哲学风</div>
+<div class="style">都市文艺风</div>
+<div class="style">冷峻悬疑风</div>
+<div class="style">童话治愈风</div>
+</div>
+</div>
+<div class="card">
+<textarea id="prompt" placeholder="输入提示词..."></textarea>
+<div class="btns">
+<button onclick="copy()">复制提示词</button>
+<button onclick="genImg()">生成图片</button>
+<button onclick="genVideo()">生成视频</button>
+</div>
+</div>
+<div class="card" id="result"></div>
+</div>
+<script>
+function copy(){navigator.clipboard.writeText(document.getElementById('prompt').value);alert('复制成功')}
+function genImg(){document.getElementById('result').innerHTML='<img src="https://picsum.photos/800/450">'}
+function genVideo(){document.getElementById('result').innerHTML='<video controls src="https://www.w3school.com.cn/i/movie.mp4"></video>'}
+</script>
+</body>
+</html>
